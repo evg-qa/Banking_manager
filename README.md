@@ -1,39 +1,38 @@
 # Banking_manager_UI
 
-#### Примечание:
-Проект был выполнен в рамках участия в SDET практикуме, где одним из дополнительных требований было наличие возможности запуска в системе CI/CD. Из-за этого было решено реализовать его в gitlab.
+#### Note:
+The project was completed as part of participation in the SDET practicum, where one of the additional requirements was the ability to run in the CI/CD system. Because of this, it was decided to implement it in GitLab.
 
 ---
-#### Ссылка на проект:
+#### Project link:
 
-[Посмотреть проект](https://gitlab.com/evge_qa/banking_manager)
+[View project](https://gitlab.com/evge_qa/banking_manager)
 
-#### Ссылки на документацию:
+#### Links to documentation:
 
 
-[Посмотреть задание](https://gitlab.com/evge_qa/banking_manager/-/blob/main/documentation/task.md)
+[View task](https://gitlab.com/evge_qa/banking_manager/-/blob/main/documentation/task.md)
 
-[Посмотреть тест кейсы](https://gitlab.com/evge_qa/banking_manager/-/blob/main/documentation/testcases.md)
+[View test cases](https://gitlab.com/evge_qa/banking_manager/-/blob/main/documentation/testcases.md)
 
-[Посмотреть отчет Allure](https://evge_qa.gitlab.io/-/banking_manager/-/jobs/6424598250/artifacts/allure-report/index.html)
+[View Allure report](https://evge_qa.gitlab.io/-/banking_manager/-/jobs/6424598250/artifacts/allure-report/index.html)
 
 ---
 
-### Запуск проекта
-#### Настройка:
-- Клонируйте репозиторий на свой компьютер
+### Running the project
+#### Setup:
+- Clone the repository to your computer:
 ```
 git clone https://gitlab.com/evge_qa/banking_manager.git
 ```
-- Перейдите в корневую папку проекта
+- Navigate to the project's root folder
 
-- Создайте виртуальное окружение:
+- Create a virtual environment:
 ```
 python -m venv venv
 ```
-
-- Активируйте виртуальное окружение:
-
+- Activate the virtual environment:
+  
 Windows:
 ```
 .\venv\Scripts\activate
@@ -42,35 +41,36 @@ macOS и Linux:
 ```
 source venv/bin/activate
 ```
-#### Зависимости:
 
-- Установите зависимости:
+#### Dependencies:
+
+- Install dependencies:
 ```
 pip install -r requirements.txt
 ```
 
-#### Запуск автотестов
+#### Running automated tests
 
-- Выполните команду для запуска тестов:
+- Run the command to execute tests:
 ```
 pytest -s -v
 ```
-- Выполните команду для параллельного запуска тестов:
+- Run the command to execute tests in parallel:
 ```
 pytest -s -v --dist loadgroup   
 ```
 
-#### Генерация и запуск отчетов Allure
+#### Generating and running Allure reports
 
-- Выполните команду для запуска тестов:
+- Run the command to execute tests:
 ```
 pytest -s -v --alluredir allure-results
 ```
-- Выполните команду для параллельного запуска тестов:
+- Run the command to execute tests in parallel:
 ```
 pytest -s -v --dist loadgroup --alluredir allure-results
 ```
-- Выполните команду для просмотра отчета:
+- Run the command to view the report:
 ```
 allure serve allure-results
 ```
